@@ -32,6 +32,9 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;

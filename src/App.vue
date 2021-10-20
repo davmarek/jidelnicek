@@ -5,6 +5,7 @@ export default {
   data() {
     return {
       menu: null,
+      date: null,
     };
   },
   components: {
@@ -13,13 +14,27 @@ export default {
   created() {
     fetch('https://doctus.creativnivyvojari.cz/app/index.php')
       .then((response) => response.json())
-      .then((json) => (this.menu = json.groups));
+      .then((json) => {
+        this.menu = json.groups;
+        this.date = new Date(json.date);
+      });
   },
 };
 </script>
 
 <template>
   <div v-if="this.menu != null">
+    <h1 id="date">
+      {{
+        this.date.toLocaleDateString('cs-CZ', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+        })
+      }}
+    </h1>
+
     <List :list="this.menu[0]"></List>
 
     <List :list="this.menu[1]"></List>
@@ -38,23 +53,26 @@ export default {
 
 body {
   margin: 0;
-  height: 100vh;
+  background-color: #fafafa;
 }
 
 #app {
   font-family: 'Rubik', Avenir, Helvetica, Arial, sans-serif;
   font-size: 14px;
-  background-color: #fafafa;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: black;
 
-  height: 100vh;
-  padding: 16px;
+  padding: 16px 16px 100px;
 }
 
 #app > div {
   margin: 0 auto;
   max-width: 1100px;
+}
+
+#date {
+  margin: 32px 0 0;
+  text-transform: capitalize;
 }
 </style>

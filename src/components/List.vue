@@ -32,6 +32,6 @@ export default {
 h2 {
   font-size: 22px;
   margin: 0;
-  padding: 32px 8px 8px;
+  padding: 24px 8px 8px;
 }
 </style>

@@ -28,7 +28,6 @@ export default {
 
     <List :list="this.menu[3]"></List>
   </div>
-  <div v-else>No data</div>
 </template>
 
 <style>
@@ -45,6 +44,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: black;
+
   height: 100vh;
+  padding: 16px;
+}
+
+#app > div {
+  margin: 0 auto;
+  max-width: 1100px;
 }
 </style>

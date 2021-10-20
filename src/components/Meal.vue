@@ -36,7 +36,7 @@ export default {
   padding: 8px 16px;
 }
 .meal:not(.meal:last-child) {
-  border-bottom: 1px solid #c8c8c8;
+  border-bottom: 1px solid #eee;
 }
 
 .name {

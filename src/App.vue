@@ -11,7 +11,7 @@ export default {
     List,
   },
   created() {
-    fetch('http://davidmarek.8u.cz/jidelnicekAPI/')
+    fetch('https://doctus.creativnivyvojari.cz/app/index.php')
       .then((response) => response.json())
       .then((json) => (this.menu = json.groups));
   },
@@ -28,6 +28,7 @@ export default {
 
     <List :list="this.menu[3]"></List>
   </div>
+  <div v-else>No data</div>
 </template>
 
 <style>

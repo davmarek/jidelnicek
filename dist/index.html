@@ -1,11 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="cs">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/jidelnicek/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAA0VXHyAAACBElEQVQ4EdVRTWvUUBQ9eXmZmMxHpkrrKIi0zjAFFy7E6mbozoU/QNBd1279GW6lP8CF6KKiUDcVXSiIRUWFSuuIjaUZ0844H51MJt/Pmyf6H/og791Lzjn3nnuBY3+Ufw7E1uMCyuIO7I1bWac9F9pBaizV3+NUk6GzeRm+yyCyQ4A9RDa9r9zcinKuFBCHr0oI3Ofi84OW8Abo7DXhLTaweGYI/HxBKIZoeICCNStj4r1GFtwgEY/JDoS/muysteztANuTi7Abc2jWdWDvJaJRV0IK1dNIowBp6Od5C9xYzQNF/Hp2Bf1vm2931uGeuypbumTVMd9+BEz7OQZZHIJxDUIImStMlS+SdIk64Cs4+IhdvYovPQfOxMO8CCU5nXoSKJKI7AtyosrvL5turq5wKrmMkY3bZ68Bsw04YQqMdv9j8kA1yjKPBi4KMzXER7/BzQoUzpc54slCEOhwf1TA7TbM2nkyNkA87kMrVUGlEXtDslyW5HQ6JsESkTX6hwWyoCjjYAbOu69wPvWonAkkgSRkMW2KNpCTEyLmYqxgynlkNNDEH4JBM9ZONi+gaE5hWAasGgkc2bJCDspPlsbgRQtp4ENRVepuIGfBzMoTRXTflMnUPdrHdfhdDd+fItr/INtXuI6wtw+tXCXBE7T6CUSaUBd6xPTiBrTxXVnheF9/AIgy2LnlXde8AAAAAElFTkSuQmCC"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="data:image/png;base64,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"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/jidelnicek/assets/android-chrome-192x192.496448a8.png"
+      sizes="192x192"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/jidelnicek/assets/android-chrome-512x512.d167061a.png"
+      sizes="512x512"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/jidelnicek/assets/apple-touch-icon.d0a271fc.png"
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jídelnicek</title>
-    <script type="module" crossorigin src="/jidelnicek/assets/index.166dc39b.js"></script>
+    <script type="module" crossorigin src="/jidelnicek/assets/index.7004d80b.js"></script>
     <link rel="modulepreload" href="/jidelnicek/assets/vendor.b32451e0.js">
     <link rel="stylesheet" href="/jidelnicek/assets/index.26cf2695.css">
   </head>

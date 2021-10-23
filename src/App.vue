@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-  <div v-if="this.menu != null">
+  <div v-if="this.date != null">
     <h1 id="date">
       {{
         this.date.toLocaleDateString('cs-CZ', {
@@ -35,13 +35,19 @@ export default {
       }}
     </h1>
 
-    <List :list="this.menu[0]"></List>
+    <div v-if="this.menu.length > 0">
+      <List :list="this.menu[0]"></List>
 
-    <List :list="this.menu[1]"></List>
+      <List :list="this.menu[1]"></List>
 
-    <List :list="this.menu[2]"></List>
+      <List :list="this.menu[2]"></List>
 
-    <List :list="this.menu[3]"></List>
+      <List :list="this.menu[3]"></List>
+    </div>
+
+    <div v-else>
+      <h3>Na dnešek není připraveno žádné menu</h3>
+    </div>
   </div>
 </template>
 

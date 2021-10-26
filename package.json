@@ -1,16 +1,18 @@
 {
-  "name": "jidelnicek",
-  "version": "1.1.0",
+  "name": "jidelnicek-svelte",
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
-  },
-  "dependencies": {
-    "vue": "^3.2.16"
+    "serve": "vite preview",
+    "pre-commit": "yarn build"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.9.3",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
+    "husky": "^7.0.4",
+    "svelte": "^3.37.0",
     "vite": "^2.6.4"
-  }
+  },
+  "dependencies": {}
 }
